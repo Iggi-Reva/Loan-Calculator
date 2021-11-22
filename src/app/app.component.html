@@ -1,0 +1,29 @@
+<div class="main">
+  <h1>Interest Calculator</h1>
+  <form id="form1">
+
+    <label>Principle </label><input type="number" #p><br><br>
+    <label>Month's </label><input type="number" #m><br><br>
+    <label>Rate of Interest </label><input type="number" value="{{rate}}" #r><br><br>
+    <label>Loan Type</label><br><br>
+    <select id="myval" (change)="select(sel.value)" #sel>
+      <option value=5>
+        Vehicle
+      </option >
+      <option value=3>
+        Home
+      </option>
+      <option value=8>
+        Personal
+      </option>
+      <option value=9>
+        Education
+      </option>
+    </select><br><br>
+    <input type="button" value="Calculate" (click)="cal(p.value,m.value,r.value)" id="cal">&nbsp;
+    <input type="Reset" value="Reset" id="rst"> <br><br>
+    <label></label>
+    <label>Principle is {{principle}}</label> <br><br>
+    <label>Interest is {{b}}</label>
+  </form>
+</div>
